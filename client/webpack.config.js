@@ -22,16 +22,16 @@ module.exports = () => {
         template: './index.html',
         title: 'J.A.T.E'
       }),
-      new InjectManifest ({
+      new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js'
+        swDest: 'src-sw.js',
       }),
-      new WebpackPwaManifest ({
+      new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Just another text editor',
+        name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
-        description: 'Take notes inside this editor',
+        description: 'Takes notes with JavaScript syntax highlighting!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
@@ -40,10 +40,10 @@ module.exports = () => {
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons')
-          }
-        ]
-      })
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      }),
     ],
 
     module: {
@@ -59,7 +59,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets:['@babel/preset-env'],
-              pluggings: ['@babel/pluggin-proposal-object-rest-spread', '@babel/transform-runtime']
+              plugings: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
             },
           },
         },
