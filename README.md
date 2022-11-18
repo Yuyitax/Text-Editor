@@ -1,4 +1,4 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# Text Editor using PWA
 
 ## Description
 
